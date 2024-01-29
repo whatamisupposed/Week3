@@ -89,7 +89,7 @@ body {
   opacity: 50%;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10%;
   z-index: 0;
 }
 
@@ -116,10 +116,18 @@ body {
   font-weight: bold;
   color: black;
   position: relative;
+  margin-left: 10px;
 }
 .hoho p {
   font-size: large;
   color: black;
   position: absolute;
   margin-top: 50px;
+  margin-left: 10px;
+}
+
+.info {
+  width: 100%;
+  height: auto;
+  margin-left: 10%;
 }/*# sourceMappingURL=dashboard.css.map */

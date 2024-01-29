@@ -89,7 +89,7 @@ body {
     opacity: 50%;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 10%;
     z-index: 0;
   }
   .logo {
@@ -112,11 +112,18 @@ body {
         font-weight: bold;
         color: $grid-color;
         position: relative;
+        margin-left: 10px;
     }
     p {
         font-size: large;
         color: $grid-color;
         position: absolute;
         margin-top: 50px;
+        margin-left: 10px;
     }
+  }
+  .info {
+    width: 100%;
+    height: auto;
+    margin-left: 10%;
   }
