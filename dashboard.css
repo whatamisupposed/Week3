@@ -146,18 +146,6 @@ body {
   display: block; /* Remove extra space beneath images */
 }
 
-.logo {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: -70px;
-}
-
-h6 {
-  color: gold;
-  letter-spacing: 2px;
-  margin-left: 5%;
-}
-
 .hoho {
   display: flex;
   justify-content: flex-start;
