@@ -1,0 +1,122 @@
+$grid-color : black;
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
+
+body {
+    background-color: gray;
+    margin: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $grid-color;
+    padding-top: 20px;
+  }
+  
+  .sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 16px;
+  }
+  
+  /* Optional: Add media query for responsive design */
+  @media screen and (max-width: 600px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {
+      float: left;
+      width: 100%;
+    }
+    .content {
+      margin-left: 0;
+    }
+  }
+  .graph-container {
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: flex-start;
+    overflow: hidden;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+
+  .graph {
+    z-index: 1;
+    height: auto;
+    width: 250px; /* Adjust the size of the box */
+    border: 1px solid $grid-color; /* Optional: Add a border for visibility */
+    overflow: hidden;
+    margin: 10px;
+    .graph:hover {
+        transform: translate(-50%, -50%);
+        color: $grid-color;
+        transition: opacity 0.3s ease;
+    }
+    .graph img {
+        transition: opacity 0.3s ease;
+    }
+    .graph:hover img {
+        opacity: 1;
+    }
+  }
+  .graph img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block; /* Remove extra space beneath images */
+  }
+  .background {
+    height: auto;
+    width: 50%;
+    opacity: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+  .logo {
+    height: auto;
+    width: 400px;
+   display: flex;
+   justify-content: center;
+  }
+  .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: -60px;
+  }
+  .hoho {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    h1 {
+        font-size: x-large;
+        font-weight: bold;
+        color: $grid-color;
+        position: relative;
+    }
+    p {
+        font-size: large;
+        color: $grid-color;
+        position: absolute;
+        margin-top: 50px;
+    }
+  }
