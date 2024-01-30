@@ -67,7 +67,6 @@ body {
   background-color: black;
   display: flex;
   justify-content: space-evenly;
-  justify-content: flex-start;
   overflow: hidden;
   flex-wrap: wrap;
   z-index: 0;
@@ -76,7 +75,7 @@ body {
 
 .graph-box {
   padding: 5px;
-  background-color: white;
+  background-color: rgb(158, 162, 175);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -97,22 +96,11 @@ body {
 .graph {
   z-index: 0;
   height: auto;
-  width: 250px; /* Adjust the size of the box */
-  border: 1px solid black; /* Optional: Add a border for visibility */
+  width: 400px; /* Adjust the size of the box */
   overflow: hidden;
   margin: 10px;
   box-shadow: 1cm;
-}
-.graph .graph:hover {
-  transform: translate(-50%, -50%);
-  color: black;
-  transition: opacity 0.3s ease;
-}
-.graph .graph img {
-  transition: opacity 0.3s ease;
-}
-.graph .graph:hover img {
-  opacity: 1;
+  justify-content: space-around;
 }
 
 .graph img {
@@ -126,6 +114,10 @@ body {
   justify-content: flex-start;
   flex-direction: row;
   padding-bottom: 30px;
+  background-color: rgb(158, 162, 175);
+  width: 60%;
+  text-align: left;
+  margin-bottom: 30px;
 }
 .hoho h1 {
   font-size: x-large;
