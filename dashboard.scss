@@ -6,43 +6,6 @@ body {
     background-color: $gray-color;
     margin: 0;
 }
-.nav a {
-    text-decoration: none;
-    color: white; 
-    margin-right: 20px; 
-    text-align: right;
-    font-weight: bold;
-  }
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 10px;
-    margin: 0;
- 
-  .nav nav {
-    display: flex;
-    align-items: center; 
-    padding: 10px;
-    margin: 0;
-}
-  }
-  .tip {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    background-color: $grid-color;
-}
-.top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black; 
-    color: white;
-    padding-bottom: 20px;
-    margin: 0;
-    z-index: 0;
-  }
 .sidebar {
     height: 100%;
     width: 250px;
