@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
 body {
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(213, 212, 214);
   margin: 0;
 }
 
@@ -11,7 +11,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(158, 162, 175);
+  background-color: rgb(247, 247, 248);
   text-align: center;
 }
 
@@ -69,7 +69,6 @@ body {
   justify-content: space-evenly;
   overflow: hidden;
   flex-wrap: wrap;
-  z-index: 0;
   box-shadow: 1cm;
 }
 
@@ -80,43 +79,81 @@ body {
   justify-content: space-between;
   flex-direction: column;
   z-index: 0;
-  margin: 10px;
+  margin: 0;
+  border-radius: 15px;
 }
 .graph-box h5 {
   color: black;
   font-size: large;
 }
-.graph-box button {
-  border: 1px solid black;
+
+.teo-container {
+  margin-top: 60px;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  flex-wrap: wrap;
+  box-shadow: 1cm;
+}
+.teo-container .big-box {
   background-color: white;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 500px;
+  height: 600px;
+}
+.teo-container .teo-box {
+  padding: 5px;
+  background-color: rgb(158, 162, 175);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 0;
+  margin: 10px;
+  border-radius: 15px;
+}
+.teo-container .teo-box h5 {
+  color: black;
+  font-size: large;
 }
 
 .graph {
-  z-index: 0;
+  margin: 0;
   height: auto;
-  width: 400px; /* Adjust the size of the box */
-  overflow: hidden;
-  margin: 10px;
-  box-shadow: 1cm;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Update box-shadow property */
   justify-content: space-around;
+  display: block;
+  overflow: hidden; /* Add overflow property to prevent extra space */
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .graph img {
+  margin: 0;
   max-width: 100%;
   max-height: 100%;
-  display: block; /* Remove extra space beneath images */
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pic {
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.button-right {
+  width: 100%;
+  justify-content: space-between;
 }
 
 .hoho {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-direction: row;
   padding-bottom: 30px;
-  background-color: rgb(158, 162, 175);
-  width: 60%;
-  text-align: left;
   margin-bottom: 30px;
 }
 .hoho h1 {
@@ -126,12 +163,21 @@ body {
   position: relative;
   margin-left: 10px;
 }
-.hoho p {
-  font-size: large;
-  color: black;
-  position: absolute;
-  margin-top: 50px;
-  margin-left: 10px;
+.hoho .right-content {
+  display: flex;
+  margin-right: 30px;
+  margin-top: 5px;
+  justify-content: space-between;
+}
+.hoho .right-content h7 {
+  width: 90px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 15px;
+  margin-right: 10px;
+  background-color: gray;
+  padding-top: 10px;
+  display: block;
 }
 
 .info {
@@ -147,4 +193,34 @@ h2, h3, h4 {
 
 h2 {
   color: white;
+}
+
+.picture {
+  display: flex;
+  align-items: center; /* Vertically center items in the flex container */
+  margin-bottom: 10px;
+}
+.picture p {
+  padding-top: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.picture .avatar-paragraph {
+  margin: 0; /* Remove default margin */
+  text-align: left; /* Align text to the left */
+  flex-grow: 1; /* Allow the paragraph to grow and take up available space */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.graph-box a {
+  font-weight: bold;
+}
+
+.teo-box a {
+  font-weight: bold;
 }/*# sourceMappingURL=dashboard.css.map */

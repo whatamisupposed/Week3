@@ -1,5 +1,5 @@
 $grid-color : black;
-$gray-color : rgb(231, 231, 231);
+$gray-color : rgb(213, 212, 214);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
 
 body {
@@ -13,7 +13,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(158, 162, 175);
+    background-color: rgb(247, 247, 248);
     text-align: center;
   }
   .avatar {
@@ -22,6 +22,7 @@ body {
     margin-right: 10px;
     z-index: 1;
 }
+
 .person {
     width: 95%;
     margin-top: 100px;
@@ -37,16 +38,15 @@ body {
     display: block;
     transition: 0.3s;
   }
-  
   .sidebar a:hover {
     color: #f1f1f1;
   }
-  
   .content {
     margin-left: 250px;
     padding: 16px;
 
   }
+
   /* Optional: Add media query for responsive design */
   @media screen and (max-width: 600px) {
     .sidebar {
@@ -69,7 +69,6 @@ body {
     
     overflow: hidden;
     flex-wrap: wrap;
-    z-index: 0;
     box-shadow:1cm;
   }
 .graph-box {
@@ -79,42 +78,78 @@ body {
     justify-content: space-between;
     flex-direction: column;
     z-index: 0;
-    margin: 10px;
+    margin: 0;
+    border-radius: 15px;
     h5 {
         color: $grid-color;
         font-size: large;
     }
-    button {
-        border: 1px solid $grid-color;
+ 
+}
+.teo-container {
+    margin-top: 60px;
+    background-color: $grid-color;
+    display: flex;
+    justify-content: space-evenly;
+    
+    overflow: hidden;
+    flex-wrap: wrap;
+    box-shadow:1cm;
+    .big-box {
         background-color: white;
-        width: fit-content;
-        
+        width: 500px;
+        height: 600px;
+    }
+    .teo-box {
+        padding: 5px;
+        background-color: rgb(158, 162, 175);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        z-index: 0;
+        margin: 10px;
+        border-radius: 15px;
+        h5 {
+            color: $grid-color;
+            font-size: large;
+        }
+     
     }
 }
-  .graph {
-    z-index: 0;
-    height: auto;
-    width: 400px; /* Adjust the size of the box */
-    overflow: hidden;
-    margin: 10px;
-    box-shadow:1cm;
-justify-content: space-around;
-  }
-  .graph img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block; /* Remove extra space beneath images */
-  }
+.graph {
+  margin: 0;
+  height: auto;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Update box-shadow property */
+  justify-content: space-around;
+  display: block;
+  overflow: hidden; /* Add overflow property to prevent extra space */
+  object-fit: cover;
+}
 
+.graph img {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: cover;
+}
+  .pic {
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.button-right {
+    width: 100%;
+justify-content: space-between;
+}
 
   .hoho {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: row;
 padding-bottom: 30px;
-background-color: rgb(158, 162, 175);
-width: 60%;
-text-align: left;
 margin-bottom: 30px;
     h1 {
         font-size: x-large;
@@ -123,14 +158,24 @@ margin-bottom: 30px;
         position: relative;
         margin-left: 10px;
     }
-    p {
-        font-size: large;
-        color: $grid-color;
-        position: absolute;
-        margin-top: 50px;
-        margin-left: 10px;
-    }
+    .right-content {
+        display: flex;
+        margin-right: 30px;
+        margin-top: 5px;
+        justify-content: space-between;
+        h7 {
+            width: 90px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 15px;
+            margin-right: 10px;
+            background-color: gray;
+            padding-top: 10px;
+            display: block;
+        }
+      }
   }
+
   .info {
     width: 100%;
     height: auto;
@@ -143,3 +188,28 @@ margin-bottom: 30px;
   h2 {
     color: white;
   }
+  .picture {
+    display: flex;
+    align-items: center; /* Vertically center items in the flex container */
+    margin-bottom: 10px;
+    p {
+        padding-top: 0;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+.picture .avatar-paragraph {
+  margin: 0; /* Remove default margin */
+  text-align: left; /* Align text to the left */
+  flex-grow: 1; /* Allow the paragraph to grow and take up available space */
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.graph-box a {
+  font-weight: bold;
+}
+.teo-box a {
+  font-weight: bold;
+}
