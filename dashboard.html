@@ -86,33 +86,94 @@
          <img src="images/color.jpg" alt="picture"></div>
      
    
-   <div class="weather-box" id="weeklyWeather">
-    <h5>Pretty Sunny</h5>
-    <div class="temperature">
-        <span class="value">20</span><span class="unit">°C</span>
-        
-          <h5>Weekly Weather Forecast</h5>
-          <button onclick="showWeeklyForecast()">Show Weekly Forecast</button>
+         <style>
+          weather-boxes {
+            display: flex;
+            flex-direction: column;
+          }
+          .container2 {
+      width: 400px;
+      height: 50px;
+      border: 1px solid black;
+      overflow: hidden;
+      position: relative;
+  }
+  
+  .message-box {
+      position: absolute;
+      white-space: nowrap;
+      animation: scrollText 10s linear infinite;
+  }
+
+  @keyframes scrollText {
+      0% {
+          transform: translateX(100%);
+      }
+      100% {
+          transform: translateX(-100%);
+      }
+  }
+      </style>
+      <div class="weather-boxes">
+      <div id="container">
+          <button id="weatherButton">Show Weather</button>
+          <div id="weatherInfo" style="display: none;"></div>
+      </div>
+      <div class="container2">
+          <div class="message-box" id="messageBox"></div>
       </div>
     </div>
+     
+      <script>
+          window.alert('hoi boiiis')
+      const messageBox = document.getElementById('messageBox');
+  
+  function addMessage(message) {
+      const newMessage = document.createElement('span');
+      newMessage.textContent = message;
+      messageBox.appendChild(newMessage);
+  }
+  
+  // Add messages
+  addMessage("The weather is a lie. ");
+  addMessage("It sucks always. Stay safe. Stay inside. Play video games.");
+  document.getElementById('weatherButton').addEventListener('click', function() {
+    var weatherInfo = document.getElementById('weatherInfo');
+    if (weatherInfo.style.display === 'none') {
+        showFakeWeather();
+        weatherInfo.style.display = 'block';
+        document.getElementById('weatherButton').innerText = 'Hide Weather';
+    } else {
+        weatherInfo.style.display = 'none';
+        document.getElementById('weatherButton').innerText = 'Show Weather';
+    }
+});
+
+function showFakeWeather() {
+    var fakeWeather = generateFakeWeather();
+    var weatherInfo = document.getElementById('weatherInfo');
+    weatherInfo.innerHTML = `
+        <h77>Fake Weather</h77>
+        <p>Temperature: ${fakeWeather.temperature}°C</p>
+        <p>Weather: ${fakeWeather.weather}</p>
+    `;
+}
+
+function generateFakeWeather() {
+    var temperature = Math.floor(Math.random() * 30) + 10; // Random temperature between 10°C and 39°C
+    var weatherConditions = ['Sunny', 'Cloudy', 'Rainy', 'Stormy'];
+    var randomIndex = Math.floor(Math.random() * weatherConditions.length);
+    var weather = weatherConditions[randomIndex];
+    return {
+        temperature: temperature,
+        weather: weather
+    };
+}
+      </script>
 </div>
 </div>
   </div>
       
-  <script>
-    function showWeeklyForecast() {
-        var weeklyWeather = document.getElementById("weeklyWeather");
-       
-        weeklyWeather.innerHTML += `
-            <div class="forecast-item">Monday: Sunny, 28°C</div>
-            <div class="forecast-item">Tuesday: Cloudy, 25°C</div>
-            <div class="forecast-item">Wednesday: Rainy, 22°C</div>
-            <div class="forecast-item">Thursday: Partly Cloudy, 26°C</div>
-            <div class="forecast-item">Friday: Clear, 30°C</div>
-            <div class="forecast-item">Saturday: Sunny, 32°C</div>
-            <div class="forecast-item">Sunday: Cloudy, 28°C</div>
-        `;
-    }
-</script>
+
 </body>
 </html>

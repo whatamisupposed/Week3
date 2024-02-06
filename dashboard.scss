@@ -88,7 +88,7 @@ body {
     background-color: $gray-color;
     display: flex;
     justify-content: space-evenly;
-    
+    height: fit-content;
     overflow: hidden;
     flex-wrap: wrap;
     box-shadow:1cm;
@@ -99,6 +99,7 @@ body {
     .teo-box {
         padding: 5px;
         width: 320px;
+        height: fit-content;
         background-color: rgb(158, 162, 175);
         display: flex;
         justify-content: space-between;
